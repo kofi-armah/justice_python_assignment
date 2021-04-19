@@ -1,0 +1,17 @@
+#import the random library
+import random
+guess = 0 #initiate guess input
+random_number = random.randint(1, 99) # random numbers to guess
+print('I am thinking of a number between 1 and 99') # instruction to request users input
+while guess != random_number:
+    user_input = int(input('Enter a guess: ')) #requesting for users input
+    #condition to compare users input with random generated number
+    if user_input == random_number:
+        print(f'Congrats! The number was: {random_number}')
+        break
+    elif int(user_input) < random_number:
+        print('Your guess is too low')
+    elif int(user_input) > random_number:
+        print('Your guess is too high')
+    """else:
+        print('your guess in not a number')"""
